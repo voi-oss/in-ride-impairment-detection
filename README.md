@@ -1,6 +1,7 @@
 # In-Ride Impairment Detection
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2610.11783"><img src="https://img.shields.io/badge/arXiv-2610.11783-b31b1b?style=flat-square" alt="arXiv 2610.11783"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/Code%20License-MIT-green?style=flat-square" alt="Code License"/></a>
   <a href="LICENSE-CC-BY-4.0.txt"><img src="https://img.shields.io/badge/Data%20License-CC%20BY%204.0-orange?style=flat-square" alt="Data License"/></a>
   <img src="https://img.shields.io/badge/Python-3.10-yellow?style=flat-square" alt="Python 3.10"/>
@@ -10,7 +11,7 @@
   <img src="img/overview.jpg" alt="Evidence accumulating from onboard sensors until it crosses the confidence threshold" width="500"/>
 </p>
 
-Code and data to reproduce the results from "In-Ride Alcohol-Impairment Detection in E-Scooterists with False-Alarm Control".
+Code and data to reproduce the results from ["In-Ride Alcohol-Impairment Detection in E-Scooterists with False-Alarm Control"](https://arxiv.org/abs/2610.11783) (arXiv preprint).
 
 Rather than testing the rider before the trip, the detector monitors inertial and throttle signals while the ride is underway and raises an alarm once the accumulated evidence of impairment is sufficient, with a provable bound on the false-alarm rate. It is evaluated on 141 rides by 25 participants, each riding sober and at two target blood alcohol concentrations, and can run in real time on an STM32 microcontroller.
 
@@ -24,6 +25,7 @@ Rather than testing the rider before the trip, the detector monitors inertial an
   - [Results](#results)
   - [On-device latency (STM32)](#on-device-latency-stm32)
   - [Paper](#paper)
+  - [How to cite](#how-to-cite)
 
 
 ## Setup
@@ -119,4 +121,20 @@ Configuration:
 | Workload     | `N_CYCLES=1000`, `PE_W=1000`, `PE_S=100`; timing via `HAL_GetTick()` (1 ms resolution) |
 
 ## Paper
-The preprint and citation details are coming soon.
+The preprint is available on arXiv: [https://arxiv.org/abs/2610.11783](https://arxiv.org/abs/2610.11783).
+
+## How to cite
+
+If you use this code, data, or ideas in your work, please cite:
+
+```bibtex
+@misc{capuccini2026inridealcoholimpairmentdetectionescooterists,
+      title={In-Ride Alcohol-Impairment Detection in E-Scooterists with False-Alarm Control},
+      author={Marco Capuccini and Rahul Rajendra Pai},
+      year={2026},
+      eprint={2610.11783},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2610.11783},
+}
+```
